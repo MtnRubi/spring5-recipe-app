@@ -13,7 +13,7 @@ public class Category {
     @ManyToMany(mappedBy = "categories")
     private Set<Recipe> recipes;
 
-    private String categoryName;
+    private String description;
 
     public Long getId() {
         return id;
@@ -31,11 +31,11 @@ public class Category {
         this.recipes = recipes;
     }
 
-    public String getCategoryName() {
-        return categoryName;
+    public String getDescription() {
+        return description;
     }
 
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
