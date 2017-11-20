@@ -98,6 +98,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
 
         Notes guacNote = new Notes();
         guacNote.setRecipeNotes("For a super quick guacamole just take 1/4 cup of your favorite salsa and still into your mashed avocados");
+
         guacNote.setRecipe(guacRecipe);
         guacRecipe.setNotes(guacNote);
 
