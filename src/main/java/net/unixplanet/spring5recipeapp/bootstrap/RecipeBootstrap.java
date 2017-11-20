@@ -88,7 +88,7 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         guacRecipe.setCookTime(0);
         guacRecipe.setPrepTime(10);
         guacRecipe.setDifficulty(Difficulty.EASY);
-        guacRecipe.setDirections("1: Cut avocado, remove flesh: Cut the avocados in half. Remore seed. Score the inside of the avocado with a blunt knife and scoop out the flesh into a bowl." +
+        guacRecipe.setDirections("1: Cut avocado, remove flesh: Cut the avocados in half. Remove seed. Score the inside of the avocado with a blunt knife and scoop out the flesh into a bowl." +
                 "\n" +
                 "2: Mash the avocado with a fork, (Don't overdo it, the guacamole should be chunky)" +
                 "\n" +
@@ -103,14 +103,14 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
         guacRecipe.setNotes(guacNote);
 
 
-        guacRecipe.getIngredients().add(new Ingredient("ripe avocados", new BigDecimal(2), eachUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("Kosher Salt", new BigDecimal(5), teaSpoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("juice of fresh limes", new BigDecimal(2), tableSpoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("minced red onion", new BigDecimal(2), tableSpoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("serrano chiles, chopped and seeded", new BigDecimal(2), eachUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("freshly grated black pepper", new BigDecimal(2), teaSpoonUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("ripe tomato, chopped and seeded", new BigDecimal(0.5), eachUom, guacRecipe));
-        guacRecipe.getIngredients().add(new Ingredient("Cilantro, (NO, into the trash it goes!)", new BigDecimal(2), eachUom, guacRecipe));
+        guacRecipe.addIngredient(new Ingredient("ripe avocados", new BigDecimal(2), eachUom));
+        guacRecipe.addIngredient(new Ingredient("Kosher Salt", new BigDecimal(5), teaSpoonUom));
+        guacRecipe.addIngredient(new Ingredient("juice of fresh limes", new BigDecimal(2), tableSpoonUom));
+        guacRecipe.addIngredient(new Ingredient("minced red onion", new BigDecimal(2), tableSpoonUom));
+        guacRecipe.addIngredient(new Ingredient("serrano chiles, chopped and seeded", new BigDecimal(2), eachUom));
+        guacRecipe.addIngredient(new Ingredient("freshly grated black pepper", new BigDecimal(2), teaSpoonUom));
+        guacRecipe.addIngredient(new Ingredient("ripe tomato, chopped and seeded", new BigDecimal(0.5), eachUom));
+        guacRecipe.addIngredient(new Ingredient("Cilantro, (NO, into the trash it goes!)", new BigDecimal(2), eachUom));
 
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexicanCategory);
